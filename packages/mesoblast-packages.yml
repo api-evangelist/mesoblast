@@ -1,0 +1,25 @@
+name: Mesoblast packages
+generated: '2026-10-22'
+method: none
+note: >-
+  Checked, nothing there. Mesoblast is a regenerative-medicine biotech with no
+  documented developer API. No first-party SDK/CLI is linked from apis.yml, and
+  the company site https://mesoblast.com/ answered a browser user-agent with
+  HTTP 403 (bot-challenge, pre-flight 2026-10-21), so no SDK page could be read.
+  Registry lookups for the name "mesoblast" on 2026-10-22 all returned 404:
+  registry.npmjs.org/mesoblast, pypi.org/pypi/mesoblast/json,
+  rubygems.org/api/v1/gems/mesoblast.json, crates.io/api/v1/crates/mesoblast,
+  api.nuget.org/v3-flatcontainer/mesoblast/index.json, api.github.com/orgs/mesoblast.
+checked:
+- https://registry.npmjs.org/mesoblast
+- https://pypi.org/pypi/mesoblast/json
+- https://rubygems.org/api/v1/gems/mesoblast.json
+- https://crates.io/api/v1/crates/mesoblast
+- https://api.nuget.org/v3-flatcontainer/mesoblast/index.json
+- https://api.github.com/orgs/mesoblast
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  url: https://mesoblast.com/
+  status: 403
+packages: []

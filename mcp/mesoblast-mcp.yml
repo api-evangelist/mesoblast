@@ -1,0 +1,17 @@
+name: Mesoblast MCP Server
+type: MCPServer
+generated: '2026-10-22'
+method: none
+status: none
+description: No official Mesoblast MCP server was found, and there is no public OpenAPI contract to derive a candidate
+  tool list from. Mesoblast is a regenerative medicine company with no public developer API.
+source:
+- url: https://www.mesoblast.com/.well-known/mcp.json
+  status: 404
+- url: https://mesoblast.com/
+  note: pre-flight 2026-10-21 found no MCP host and no OpenAPI/AsyncAPI/GraphQL/MCP contract on mesoblast.com or api.mesoblast.com
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+tools: []

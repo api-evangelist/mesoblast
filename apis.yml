@@ -1,23 +1,69 @@
 aid: mesoblast
+
 name: Mesoblast
-description: 'Mesoblast is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Mesoblast Limited is an Australian regenerative medicine company headquartered in Melbourne,
+  founded in 2004 by Silviu Itescu and listed on the ASX (MSB) and Nasdaq (MESO). It develops allogeneic cellular
+  medicines based on mesenchymal lineage cells, including remestemcel-L for steroid-refractory acute graft versus
+  host disease and rexlemestrocel-L for chronic heart failure and chronic low back pain. Its website answered our
+  crawler with a bot challenge, and we found no public developer API or documentation.'
+
 url: https://raw.githubusercontent.com/api-evangelist/mesoblast/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
-modified: '2026-10-21'
+
+modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- Regenerative Medicine
+- Cell Therapy
+- Pharmaceuticals
+- Australia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/mesoblast-well-known.yml
+- type: Hosts
+  url: hosts/mesoblast-hosts.yml
+- type: Vendors
+  url: vendors/mesoblast-vendors.yml
+- type: DomainSecurity
+  url: security/mesoblast-domain-security.yml
 - type: Website
   url: https://mesoblast.com/
+
+apis: []
+
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  detail: mesoblast.com answered a browser User-Agent with HTTP 403 (anti-bot challenge) during pre-flight on 2026-10-21;
+    identity was confirmed from Wikipedia. No developer portal, docs or API pointers were found.
+  evidence:
+  - url: https://mesoblast.com/
+    status: 403
+  - url: https://en.wikipedia.org/wiki/Mesoblast
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 12
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic
